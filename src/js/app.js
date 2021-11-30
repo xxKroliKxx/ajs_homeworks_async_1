@@ -1,14 +1,7 @@
-import Read from './reader';
-import json from './parser';
+import GameSavingLoader from './gameSavingLoader';
 
-export default class GameSavingLoader {
-  static load() {
-    return new Promise((resolve) => {
-      Read().then((saving) => {
-        json(saving).then((result) => {
-          resolve(JSON.parse(result));
-        });
-      });
-    });
-  }
-}
+GameSavingLoader.load().then((saving) => {
+  console.log(saving);
+}, (error) => {
+  console.log(error);
+});

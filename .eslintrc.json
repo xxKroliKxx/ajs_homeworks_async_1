@@ -13,6 +13,7 @@
       "LabeledStatement",
       "WithStatement"
     ],
-    "class-methods-use-this": ["error", { "exceptMethods": ["load"] }]
+    "class-methods-use-this": ["error", { "exceptMethods": ["load"] }],
+    "no-console": 0
   }
 }
